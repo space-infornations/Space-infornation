@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bootstrap 5 </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the navigation bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.59);
+            border-radius: 0px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.8px);
+            -webkit-backdrop-filter: blur(5.8px);
+
+        }
+
+        .navbar-brand {
+            font-family: 'Roboto', sans-serif;
+            /* Use Google Font */
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            /* White color for text */
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #fff;
+            /* Change to your desired hover color */
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Roboto', sans-serif;
+            /* Use Google Font */
+            font-size: 18px;
+            color: #fff !important;
+            /* White color for text */
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000 !important;
+            /* Black color on hover */
+        }
+
+        .dropdown-menu {
+            border: none;
+            /* Remove border */
+            border-radius: 0;
+            animation: fadeInDown 0.5s ease;
+            transition: opacity 0.3s ease;
+            /* Add transition for opacity */
+            opacity: 0;
+            /* Initially hidden */
+            transform: translateY(-10px);
+            /* Initially shifted up */
+        }
+
+        .dropdown-item {
+            font-family: 'Roboto', sans-serif;
+            /* Use Google Font */
+            color: #333;
+            /* Custom color */
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            /* Change to your desired hover background color */
+            color: #007bff;
+            /* Change to your desired hover color */
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dropdown-menu.show {
+            opacity: 1;
+            /* Show the dropdown */
+            transform: translateY(0);
+            /* Remove the shift */
+        }
+
+        .navbar-nav .nav-link {
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+            border-radius: 10px;
+            /* Adjust the border radius as needed */
+        }
+
+        .navbar-nav .nav-link:hover {
+            background: rgba(101, 95, 95, 0.41);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0px);
+            background-color: plum;
+            -webkit-backdrop-filter: blur(0px);
+            /* Change to the desired text color on hover */
+        }
+
+        .dark-mode-toggle.active {
+            background-color: #000;
+            /* Change to your desired background color for active state */
+        }
+
+        .dark-mode-toggle.active i {
+            color: #fff;
+            /* Change to your desired icon color for active state */
+        }
+
+
+        /* Full-page dark mode */
+        .full-page-dark-mode {
+            background-color: #222;
+            /* Change this to your desired dark background color */
+            color: #fff;
+            /* Change this to your desired light text color */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Transition for background color and text color */
+        }
+
+        /* Dark mode for navbar */
+        .dark-mode-navbar {
+            background-color: #333;
+            /* Change this to your desired dark background color for the navbar */
+            color: #fff;
+            /* Change this to your desired light text color for the navbar */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Transition for background color and text color */
+        }
+
+
+        /* Dark mode toggle button */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+    border-radius: 10px; /* Adjust the border radius value as needed */
+    background-color: #000000; /* Example background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Example box shadow */
+    transition: all 0.3s ease; /* Example transition */
+    color: white; /* Set text color to white */
+}
+
+.dropdown-menu:hover {
+    /* Example hover background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Example hover box shadow */
+}
+
+
+/* Style for dropdown item */
+.dropdown-item {
+    color: white; /* Set text color to white */
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+    background-color: #f29aff; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+    border-radius: 10px;
+}
+
+        
+    </style>
+
+    <script>
+        // Define the toggleDarkMode function
+        let isDarkMode = false; // Variable to track the current mode
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const navBar = document.querySelector('.navbar');
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+            isDarkMode = !isDarkMode; // Toggle the mode
+
+            if (isDarkMode) {
+                body.classList.add('full-page-dark-mode');
+                navBar.classList.add('dark-mode-navbar');
+                darkModeToggle.classList.add('active');
+            } else {
+                body.classList.remove('full-page-dark-mode');
+                navBar.classList.remove('dark-mode-navbar');
+                darkModeToggle.classList.remove('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to toggle dark mode
+            function toggleDarkMode() {
+                const body = document.body;
+                const navBar = document.querySelector('.navbar');
+                const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+                body.classList.toggle('full-page-dark-mode');
+                navBar.classList.toggle('dark-mode-navbar');
+                darkModeToggle.classList.toggle('active');
+
+                // Save user preference to local storage
+                const isDarkModeEnabled = body.classList.contains('full-page-dark-mode');
+                localStorage.setItem('darkModeEnabled', isDarkModeEnabled);
+            }
+
+            // Check if user has set dark mode preference previously
+            const isDarkModePreferred = localStorage.getItem('darkModeEnabled') === 'true';
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+            // Set dark mode based on user preference
+            if (isDarkModePreferred) {
+                toggleDarkMode();
+            }
+
+            // Toggle dark mode when dark mode toggle button is clicked
+            darkModeToggle.addEventListener('click', function () {
+                toggleDarkMode();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="path_to_your_logo" width="30" height="30" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-star" style="color: rgb(255, 136, 255);"></i> <!-- Font Awesome star icon -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item home-link"> <!-- Add the 'home-link' class here -->
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown dropup ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
+                            <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Latest Posts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Solar System
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"> Show 3d solar ystem </a></li>
+                            <li><a class="dropdown-item" href="#"> other </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-submenu">
+                                <!-- Submenu items here -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Add a custom button to trigger the modal popup -->
+                        <a class="nav-link contact-btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                      </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Planet and Stars"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success rounded-pill" type="submit"><i class="fas fa-search"
+                            style="color: rgb(255, 255, 255);"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dark mode toggle button -->
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    
+
+    <!-- Bootstrap Bundle with Popper.js -->
+      </srcipt>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

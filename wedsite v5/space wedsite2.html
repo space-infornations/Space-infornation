@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Space Website </title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="path_to_your_logo" width="30" height="30" class="d-inline-block align-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-star" style="color: rgb(255, 136, 255);"></i> <!-- Font Awesome star icon -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item home-link"> <!-- Add the 'home-link' class here -->
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
+              <li><a class="dropdown-item dropdown-item-text-bg" href="#">Category 1</a></li>
+              <li><a class="dropdown-item dropdown-item-text-bg" href="#">Category 2</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item dropdown-item-text-bg" href="#">Latest Posts</a></li>
+            </ul>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Solar System
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#"> Show 3d solar ystem </a></li>
+              <li><a class="dropdown-item" href="#"> other </a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="dropdown-submenu">
+                <!-- Submenu items here -->
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <!-- Add a custom button to trigger the modal popup -->
+            <a class="nav-link contact-btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 rounded-pill" type="search" placeholder="Planet and Stars"
+            aria-label="Search">
+          <button class="btn btn-outline-success rounded-pill" type="submit"><i class="fas fa-search"
+              style="color: rgb(255, 255, 255);"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dark mode toggle button -->
+
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Your contact form goes here -->
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="hero position-relative mt-5 mt-lg-5 mt-xl-7" style="margin-top: 20px; z-index: -100;"> <!-- Added inline margin-top and z-index -->
+          <img src="https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?cs=srgb&dl=pexels-hristo-fidanov-1252890.jpg&fm=jpg"
+            class="img-fluid" alt="Space Image">
+          <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <div>
+              <h1 class="display-4">Explore the Wonders of Space</h1>
+              <p class="lead">Discover the beauty and mysteries of the universe with Space Website.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="mb-4">About Us</h2>
+        <p>Welcome to Space Website! We are dedicated to bringing you the latest news, discoveries, and wonders of the
+          universe. Explore with us as we uncover the mysteries of space and delve into the infinite possibilities that
+          lie beyond our planet.</p>
+        <p>Our mission is to inspire curiosity and awe for the cosmos through engaging content and captivating visuals.
+        </p>
+        <button class="btn btn-primary mt-3">Learn More</button>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <img
+            src="https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg"
+            alt="Space" class="img-fluid rounded-circle shadow" style="width: 80%;">
+          <div class="mt-3">
+            <p class="fw-bold">Explore the Universe</p>
+            <p>Join us on a journey through the cosmos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="space-art-gallery" class="container my-5">
+    <h2 class="text-center mb-4">Space Art Gallery</h2>
+    <div class="row">
+      <!-- Space Artwork Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="path_to_your_image_1.jpg" class="card-img-top" alt="Space Artwork 1">
+          <div class="card-body">
+            <h5 class="card-title">Space Artwork Title 1</h5>
+            <p class="card-text">Description of Space Artwork 1.</p>
+            <!-- Add any additional details or buttons here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Space Artwork Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="path_to_your_image_2.jpg" class="card-img-top" alt="Space Artwork 2">
+          <div class="card-body">
+            <h5 class="card-title">Space Artwork Title 2</h5>
+            <p class="card-text">Description of Space Artwork 2.</p>
+            <!-- Add any additional details or buttons here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="path_to_your_image_1.jpg" class="card-img-top" alt="Space Artwork 1">
+          <div class="card-body">
+            <h5 class="card-title">Space Artwork Title 1</h5>
+            <p class="card-text">Description of Space Artwork 1.</p>
+            <!-- Add any additional details or buttons here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center">
+    <a href="next_page.html" class="btn btn-primary">See Next Page</a>
+  </div>
+  <!-- End of Space Art Gallery Section -->
+
+
+
+  <section id="latest-blogs" class="container my-5">
+    <h2 class="text-center mb-4">Latest Blogs</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Mercury Planet </h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed felis in magna
+              feugiat malesuada.</p>
+            <a href="Mercury.html" target="_blank" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Venus Planet </h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed felis in magna
+              feugiat malesuada.</p>
+            <a href="Venus.html" target="_blank class=" btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Earth Planet </h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed felis in magna
+              feugiat malesuada.</p>
+            <a href=" Earth.html" target="_blank class=" btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Mars Planet </h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed felis in magna
+              feugiat malesuada.</p>
+            <a href="Mars.html" target="_blank class=" btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination justify-content-center">
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item disabled"><span class="page-link">...</span></li>
+          <li class="page-item"><a class="page-link" href="#">10</a></li> <!-- Assuming there are 10 pages -->
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section id="email-notification" class="container my-5">
+    <h2 class="text-center mb-4">Subscribe to Our Newsletter</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your Email Address" aria-label="Your Email Address"
+              aria-describedby="subscribe-button">
+            <button class="btn btn-primary" type="button" id="subscribe-button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 Space Website. All rights reserved.</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline social-icons">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="">   </script>
+  <script src="script.js">   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
