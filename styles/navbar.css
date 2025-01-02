@@ -1,0 +1,69 @@
+/* Base styles for the navbar */
+.custom-nav {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #000428, #004e92, #0f2027);
+    background-size: 400% 400%; /* Create a dynamic effect */
+    animation: spaceGradient 15s ease infinite; /* Smooth gradient animation */
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #ff9900; /* Accent border */
+}
+
+/* Gradient animation */
+@keyframes spaceGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar brand styles */
+.custom-nav .custom-nav-brand {
+    display: flex;
+    align-items: center;
+    color: #ff9900 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navbar links */
+.custom-nav .custom-nav-links .custom-nav-link {
+    color: #ffffff !important;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-nav .custom-nav-links .custom-nav-link:hover {
+    color: #ff9900 !important;
+    background-color: rgba(255, 153, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Dropdown menu styles */
+.custom-nav .custom-dropdown {
+    background-color: rgba(0, 4, 40, 0.95); /* Semi-transparent background */
+    border: 1px solid #ff9900;
+    border-radius: 5px;
+}
+
+.custom-nav .custom-dropdown-item {
+    color: #ffffff !important;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-nav .custom-dropdown-item:hover {
+    background-color: #ff9900;
+    color: #333333 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .custom-nav .custom-nav-links {
+        margin-top: 1rem;
+    }
+    .custom-nav .custom-nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
