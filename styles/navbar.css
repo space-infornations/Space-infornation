@@ -85,12 +85,6 @@
     text-shadow: 0 0 8px #ff6f61, 0 0 16px #ff6f61;
 }
 
-/* Remove Starry Effects on Body */
-body {
-    color: #f0f0f0;
-    font-family: 'Orbitron', sans-serif;
-}
-
 .custom-space-nav {
     list-style: none;
 }
