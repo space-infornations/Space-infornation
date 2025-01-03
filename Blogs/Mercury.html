@@ -9,52 +9,57 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 
 </head>
-<link rel="stylesheet" href="styles/navbar.css"> <!-- Link to external CSS -->
-<link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
-<link rel="stylesheet" href="nav.css"> <!-- Link to external CSS -->
+<link rel="stylesheet" href="navbar.css"> <!-- Link to external CSS -->
+<link rel="stylesheet" href="Styles2/mercury.css"> <!-- Link to external CSS -->
+<link rel="stylesheet" href="Styles2/nav.css"> <!-- Link to external CSS -->
 <link rel="stylesheet" href="mercury.css"> <!-- Link to external CSS -->
+<link rel="stylesheet" href="Styles2/iframe.css">
+<script src="scriptfiles/iframe.js">  </script>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top navbar-custom">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top custom-space-navbar">
+        <div class="container custom-space-container">
             <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img loading="lazy"
-                    src="https://png.pngtree.com/png-clipart/20230527/original/pngtree-s-logo-icon-png-image_9171884.png"
-                    alt="MyWebsite Logo" class="logo" width="50px" height="30px">
-                <span class="d-none d-md-inline-block ms-2"> MyWebsite </span>
+            <a class="navbar-brand d-flex align-items-center custom-space-navbar-brand" href="#">
+                <img src="path-to-your-logo/logo.png" alt="Custom Logo" class="custom-logo">
+                <span class="d-none d-md-inline-block ms-2 text-white custom-space-brand-text">Cosmic Adventures</span>
             </a>
-            <!-- Navbar Toggler -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Custom Star Toggler -->
+            <button class="navbar-toggler custom-space-navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-star text-white fs-4 custom-space-toggler-icon"></i>
             </button>
             <!-- Collapsible Content -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="planetsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="collapse navbar-collapse custom-space-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto custom-space-nav">
+                    <li class="nav-item custom-space-nav-item"><a class="nav-link text-white custom-space-nav-link"
+                            href="#">Home</a></li>
+                    <li class="nav-item custom-space-nav-item"><a class="nav-link text-white custom-space-nav-link"
+                            href="#">About</a></li>
+                    <li class="nav-item custom-space-nav-item"><a class="nav-link text-white custom-space-nav-link"
+                            href="#">Services</a></li>
+                    <li class="nav-item custom-space-nav-item"><a class="nav-link text-white custom-space-nav-link"
+                            href="#">Blog</a></li>
+                    <li class="nav-item dropdown custom-space-dropdown">
+                        <a class="nav-link dropdown-toggle text-white custom-space-dropdown-toggle" href="#"
+                            id="planetsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Planets
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="planetsDropdown">
-                            <li><a class="dropdown-item" href="#mercury">Mercury</a></li>
-                            <li><a class="dropdown-item" href="#">Venus</a></li>
-                            <li><a class="dropdown-item" href="#">Earth</a></li>
-                            <li><a class="dropdown-item" href="#">Mars</a></li>
-                            <li><a class="dropdown-item" href="#">Jupiter</a></li>
-                            <li><a class="dropdown-item" href="#">Saturn</a></li>
-                            <li><a class="dropdown-item" href="#">Uranus</a></li>
-                            <li><a class="dropdown-item" href="#">Neptune</a></li>
-                            <li><a class="dropdown-item" href="#">Pluto</a></li>
+                        <ul class="dropdown-menu custom-space-dropdown-menu" aria-labelledby="planetsDropdown">
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Mercury</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Venus</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Earth</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Mars</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Jupiter</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Saturn</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Uranus</a></li>
+                            <li><a class="dropdown-item custom-space-dropdown-item" href="#">Neptune</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item custom-space-nav-item"><a class="nav-link text-white custom-space-nav-link"
+                            href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -130,6 +135,23 @@
         </div>
     </section>
 
+    <!-- Mars Planet Iframe -->
+    <section id="custom-mercury-explorer" class="custom-mercury-container py-5">
+        <h2 class="text-center mb-4 custom-mercury-title">Explore Mercury <i class="fas fa-satellite-dish"></i></h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Custom Mercury information iframe -->
+                <div class="custom-mercury-iframe-wrapper">
+                    <iframe id="mercury-iframe" src="Mercury.mp4" class="custom-mercury-iframe"></iframe>
+                </div>
+                <p class="mt-3 text-center custom-mercury-description">Discover the smallest and closest planet to the
+                    Sun!
+                </p>
+                <button id="fullscreen-btn" class="btn btn-primary">Go Fullscreen</button>
+                <button id="redirect-btn" class="btn btn-secondary">Go to Another Page</button>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->
