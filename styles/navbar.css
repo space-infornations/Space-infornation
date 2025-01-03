@@ -17,14 +17,12 @@
     width: 40px;
     height: auto;
     margin-right: 10px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Glowing effect on logo */
 }
 
 .custom-space-brand-text {
     font-size: 28px;
     font-weight: bold;
     color: #f0f0f0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Space theme text glow */
 }
 
 .custom-space-navbar-toggler {
@@ -32,12 +30,6 @@
     background: transparent;
     font-size: 28px;
     color: #f0f0f0;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Glowing star effect */
-}
-
-.custom-space-toggler-icon {
-    color: #f0f0f0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Glowing effect */
 }
 
 .custom-space-nav-item .custom-space-nav-link {
@@ -46,13 +38,13 @@
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: color 0.3s, text-shadow 0.3s;
+    padding: 10px 20px;
+    transition: color 0.3s;
 }
 
 .custom-space-nav-item .custom-space-nav-link:hover,
 .custom-space-nav-item .custom-space-nav-link:focus {
-    color: #ff6f61;
-    text-shadow: 0 0 8px #ff6f61, 0 0 16px #ff6f61; /* Glowing hover effect */
+    color: #ff6f61; /* Space-like orange color for hover */
 }
 
 .custom-space-dropdown-toggle {
@@ -61,7 +53,6 @@
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 1px;
-    padding-right: 1.5rem;
 }
 
 .custom-space-dropdown-menu {
@@ -75,15 +66,14 @@
     font-size: 16px;
     padding: 12px 20px;
     text-transform: uppercase;
-    transition: background 0.3s, color 0.3s;
 }
 
 .custom-space-dropdown-item:hover,
 .custom-space-dropdown-item:focus {
     background: #ff6f61;
     color: #fff;
-    text-shadow: 0 0 8px #ff6f61, 0 0 16px #ff6f61;
 }
+
 
 .custom-space-nav {
     list-style: none;
@@ -104,25 +94,34 @@
     font-weight: 500;
 }
 
-/* Hover animation for navbar links */
-.custom-space-nav-link {
-    position: relative;
+/* Navbar layout adjustments */
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
-.custom-space-nav-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #ff6f61;
-    bottom: -4px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+.custom-space-container {
+    padding: 0 30px;
 }
 
-.custom-space-nav-link:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.custom-space-nav-item .custom-space-nav-link,
+.custom-space-dropdown-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsive settings for smaller screens */
+@media (max-width: 767px) {
+    .custom-space-navbar-brand .custom-logo {
+        width: 30px;
+    }
+
+    .custom-space-brand-text {
+        font-size: 20px;
+    }
+
+    .navbar-toggler {
+        font-size: 24px;
+    }
 }
