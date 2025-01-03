@@ -1,61 +1,63 @@
-/* Base styles for the navbar */
-.custom-nav {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #000428, #004e92, #0f2027);
-    background-size: 400% 400%; /* Create a dynamic effect */
-    animation: spaceGradient 15s ease infinite; /* Smooth gradient animation */
-    padding: 0.5rem 1rem;
-    border-bottom: 2px solid #ff9900; /* Accent border */
+/* Space Theme Custom Styles */
+.custom-space-navbar {
+    background: linear-gradient(135deg, #000046, #1CB5E0); /* Cosmic gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
-/* Gradient animation */
-@keyframes spaceGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+
+.custom-space-container {
+    padding: 0.5rem;
 }
-/* Navbar brand styles */
-.custom-nav .custom-nav-brand {
+
+.custom-space-navbar-brand {
     display: flex;
     align-items: center;
-    color: #ff9900 !important;
+}
+
+.custom-space-brand-text {
+    font-family: 'Orbitron', sans-serif; /* Sci-fi font */
     font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+    letter-spacing: 1px;
 }
-/* Navbar links */
-.custom-nav .custom-nav-links .custom-nav-link {
-    color: #ffffff !important;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
+
+.custom-space-navbar-toggler {
+    background: none;
+    border: none;
 }
-.custom-nav .custom-nav-links .custom-nav-link:hover {
-    color: #ff9900 !important;
-    background-color: rgba(255, 153, 0, 0.1);
-    border-radius: 5px;
+
+.custom-space-toggler-icon {
+    color: white;
+    font-size: 1.5rem;
 }
-/* Dropdown menu styles */
-.custom-nav .custom-dropdown {
-    background-color: rgba(0, 4, 40, 0.95); /* Semi-transparent background */
-    border: 1px solid #ff9900;
-    border-radius: 5px;
+
+.custom-space-nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Glowing text effect */
 }
-.custom-nav .custom-dropdown-item {
-    color: #ffffff !important;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+.custom-space-nav-link:hover {
+    color: #00b3ff; /* Bright blue hover effect */
 }
-.custom-nav .custom-dropdown-item:hover {
-    background-color: #ff9900;
-    color: #333333 !important;
+
+.custom-space-dropdown-toggle {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
-/* Responsive adjustments */
-@media (max-width: 991px) {
-    .custom-nav .custom-nav-links {
-        margin-top: 1rem;
-    }
-    .custom-nav .custom-nav-item {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+
+.custom-space-dropdown-menu {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.custom-space-dropdown-item {
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.custom-space-dropdown-item:hover {
+    background-color: #1a73e8; /* Blue hover effect */
+}
+
+.custom-space-collapse {
+    font-family: 'Roboto', sans-serif;
 }
