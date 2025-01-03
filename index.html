@@ -14,47 +14,60 @@
 <link rel="stylesheet" href="blog.css"> <!-- Link to external CSS -->
 
 <body>
-    <!-- Custom Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark sticky-top">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="path-to-your-logo/logo.png" alt="Custom Logo" class="custom-logo">
-                <span class="d-none d-md-inline-block ms-2 text-white">My Custom Website</span>
-            </a>
-            <!-- Custom Star Toggler -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-star text-white fs-4"></i>
-            </button>
-            <!-- Collapsible Content -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="planetsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Planets
-                        </a>
-                      <ul class="dropdown-menu" aria-labelledby="planetsDropdown">
-    <li><a class="dropdown-item" href="#">Mercury</a></li>
-    <li><a class="dropdown-item" href="#">Venus</a></li>
-    <li><a class="dropdown-item" href="#">Earth</a></li>
-    <li><a class="dropdown-item" href="#">Mars</a></li>
-    <li><a class="dropdown-item" href="#">Jupiter</a></li>
-    <li><a class="dropdown-item" href="#">Saturn</a></li>
-    <li><a class="dropdown-item" href="#">Uranus</a></li>
-    <li><a class="dropdown-item" href="#">Neptune</a></li>
-    <!-- Add more celestial objects as needed -->
-</ul>
-
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
-                </ul>
-            </div>
+ <!-- Custom Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark sticky-top custom-navbar">
+    <div class="container custom-container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center custom-navbar-brand" href="#">
+            <img src="path-to-your-logo/logo.png" alt="Custom Logo" class="custom-logo">
+            <span class="d-none d-md-inline-block ms-2 text-white custom-brand-text">My Custom Name</span>
+        </a>
+        <!-- Custom Star Toggler -->
+        <button 
+            class="navbar-toggler custom-navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <i class="fas fa-star text-white fs-4 custom-toggler-icon"></i>
+        </button>
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse custom-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto custom-nav">
+                <li class="nav-item custom-nav-item"><a class="nav-link text-white custom-nav-link" href="#">Home</a></li>
+                <li class="nav-item custom-nav-item"><a class="nav-link text-white custom-nav-link" href="#">About</a></li>
+                <li class="nav-item custom-nav-item"><a class="nav-link text-white custom-nav-link" href="#">Services</a></li>
+                <li class="nav-item custom-nav-item"><a class="nav-link text-white custom-nav-link" href="#">Blog</a></li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a 
+                        class="nav-link dropdown-toggle text-white custom-dropdown-toggle" 
+                        href="#" 
+                        id="planetsDropdown" 
+                        role="button" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        Planets
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="planetsDropdown">
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Mercury</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Venus</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Earth</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Mars</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Jupiter</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Saturn</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Uranus</a></li>
+                        <li><a class="dropdown-item custom-dropdown-item" href="#">Neptune</a></li>
+                        <!-- Add more celestial objects as needed -->
+                    </ul>
+                </li>
+                <li class="nav-item custom-nav-item"><a class="nav-link text-white custom-nav-link" href="#">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <header class="bg-primary text-white text-center py-5">
