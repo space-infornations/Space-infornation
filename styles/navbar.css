@@ -54,10 +54,12 @@
     transition: background-color 0.3s;
 }
 
-.custom-space-dropdown-item:hover {
-    background-color: #1a73e8; /* Blue hover effect */
+.custom-space-dropdown-item {
+    color: #ffffff; /* Default white text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
 }
 
-.custom-space-collapse {
-    font-family: 'Roboto', sans-serif;
+.custom-space-dropdown-item:hover {
+    background-color: #1a73e8; /* Blue hover background */
+    color: #ffffff; /* Ensure the text stays white on hover */
 }
