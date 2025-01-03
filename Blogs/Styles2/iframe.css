@@ -1,6 +1,6 @@
 /* Custom container styling for the Mercury section */
 .custom-mercury-container {
-    background-color: #2D2D2D;
+    background-color: #313131;
     /* Light gray for a clean and modern look */
     border-radius: 12px;
     /* Rounded corners */
@@ -66,4 +66,36 @@
 .custom-mercury-title i {
     color: #FFCC00;
     /* Bright yellow for the icon */
+}
+
+/*   Custom Buttom   */
+.custom-mercury-button {
+    background-color: #9f60b3;
+    /* Button background color */
+    border: none;
+    color: white;
+    /* Button text color */
+    padding: 10px 20px;
+    /* Button padding */
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline from link */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.custom-mercury-link {
+    color: white;
+    /* Link text color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.custom-mercury-button:hover {
+    background-color: #45a049;
+    /* Button hover color */
 }
