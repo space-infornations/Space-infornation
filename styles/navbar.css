@@ -1,120 +1,130 @@
-
-/* Navbar Styles */
+/* Space Theme Styling */
 .custom-space-navbar {
-    background: linear-gradient(135deg, #1e1e1e, #2a2a72, #6a5acd);
-    border-bottom: 2px solid #fff;
-}
-
-.custom-space-container {
-    padding: 0 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* Deep space gradient */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .custom-space-navbar-brand {
-    font-size: 1.8rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
 }
 
-.custom-logo {
+.custom-space-navbar-brand .custom-logo {
     width: 40px;
-    height: 40px;
+    height: auto;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Glowing effect on logo */
 }
 
-/* Navbar Toggler Styles */
+.custom-space-brand-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Space theme text glow */
+}
+
 .custom-space-navbar-toggler {
-    background: transparent;
     border: none;
-    box-shadow: none;
+    background: transparent;
+    font-size: 28px;
+    color: #f0f0f0;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Glowing star effect */
 }
 
 .custom-space-toggler-icon {
-    color: #fff;
-    font-size: 1.5rem;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Glowing effect */
 }
 
-/* Navigation Link Styles */
-.custom-space-nav-link {
-    text-transform: uppercase;
-    font-weight: 500;
+.custom-space-nav-item .custom-space-nav-link {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 18px;
     letter-spacing: 1px;
-    padding: 15px 20px;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-.custom-space-nav-link:hover {
+.custom-space-nav-item .custom-space-nav-link:hover,
+.custom-space-nav-item .custom-space-nav-link:focus {
     color: #ff6f61;
-    transform: scale(1.1);
+    text-shadow: 0 0 8px #ff6f61, 0 0 16px #ff6f61; /* Glowing hover effect */
 }
 
-/* Dropdown Menu Styles */
+.custom-space-dropdown-toggle {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-right: 1.5rem;
+}
+
 .custom-space-dropdown-menu {
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #fff;
+    background: #0f3460;
+    border-radius: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .custom-space-dropdown-item {
     color: #fff;
-    padding: 10px 20px;
-    transition: color 0.3s;
+    font-size: 16px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
 }
 
-.custom-space-dropdown-item:hover {
+.custom-space-dropdown-item:hover,
+.custom-space-dropdown-item:focus {
     background: #ff6f61;
-    color: #000;
+    color: #fff;
+    text-shadow: 0 0 8px #ff6f61, 0 0 16px #ff6f61;
 }
 
-/* Space Glowing Effects */
+/* Remove Starry Effects on Body */
+
+.custom-space-nav {
+    list-style: none;
+}
+
+.custom-space-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .custom-space-nav-item {
+    margin: 0 15px;
+}
+
+.custom-space-nav-item .custom-space-nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Hover animation for navbar links */
+.custom-space-nav-link {
     position: relative;
 }
 
-.custom-space-nav-item::before {
+.custom-space-nav-link::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 2px;
-    background: #ff6f61;
-    animation: glowing 1.5s infinite ease-in-out;
-    opacity: 0.7;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes glowing {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; transform: scale(1.1); }
-    100% { opacity: 0.7; }
-}
-
-/* Smooth Dropdown Transition */
-.custom-space-dropdown-menu {
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Space Gradient Background */
-.custom-space-navbar {
-    background: linear-gradient(135deg, #1e1e1e, #2a2a72, #6a5acd);
-}
-
-/* Starry Effect */
-.custom-space-navbar::before {
-    content: '';
-    position: absolute;
-    top: 0;
+    background-color: #ff6f61;
+    bottom: -4px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.custom-space-nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
