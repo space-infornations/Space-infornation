@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Video</title>
+    <style>
+        /* Make the video cover the entire screen */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the video covers the entire screen */
+        }
+    </style>
+</head>
+
+<body>
+
+    <video id="video" autoplay muted loop>
+        <!-- Default source, will be replaced based on device -->
+        <source id="lowQuality" src="Mercury video for  modile device.mp4" type="video/mp4" data-quality="low">
+        <source id="highQuality" src="Mercury.mp4" type="video/mp4" data-quality="high">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // Function to adjust video quality based on screen size or device type
+        function adjustVideoQuality() {
+            const videoElement = document.getElementById('video');
+            const lowQualitySource = document.getElementById('lowQuality');
+            const highQualitySource = document.getElementById('highQuality');
+
+            const screenWidth = window.innerWidth;
+
+            // Immediately load the low quality video for mobile devices (screenWidth <= 768px)
+            if (screenWidth <= 768) {
+                videoElement.src = lowQualitySource.src;  // Set low quality video
+            } else {
+                // For tablets and desktops, load high quality
+                videoElement.src = highQualitySource.src;  // Set high quality video
+            }
+
+            // Reload the video to apply the new source
+            videoElement.load();
+            videoElement.play();
+        }
+
+        // Call the adjustVideoQuality function when the page loads
+        window.addEventListener('load', adjustVideoQuality);
+        // Ensure the video quality is checked as soon as possible without waiting for resize
+        adjustVideoQuality();
+    </script>
+
+</body>
+
+</html>
