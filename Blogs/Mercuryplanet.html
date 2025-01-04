@@ -68,7 +68,13 @@
             }
 
             videoElement.load();
-            videoElement.play();
+
+            // Wait for the video to load before playing
+            videoElement.addEventListener('loadeddata', () => {
+                videoElement.play().catch(err => {
+                    console.warn('Video playback failed:', err);
+                });
+            }, { once: true });
         }
 
         // Enable full screen and auto-rotate for mobile devices
